@@ -7,4 +7,3 @@ def test_max_adjacent():
     assert list_max_adjacent([1, 2, 2.5, 5]) == 2.5
     assert list_max_adjacent([-1, 1, -2]) == 3
     return
-    
