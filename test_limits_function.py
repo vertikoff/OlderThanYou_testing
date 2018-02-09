@@ -10,5 +10,5 @@ def test_limits_function():
     output = return_limits([3.3, -5.7, 9, -6.7])
     assert output[0] + 6.7 < tolerance
     assert output[1] - 9 < tolerance
-    
+
     pass
