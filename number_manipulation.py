@@ -7,8 +7,13 @@ def return_sum(num_list):
     :returns sum: the sum of the ints and floats passed in num_list
     """
     sum = 0
-    for num in num_list:
-        sum += num
+    try:
+        for num in num_list:
+            sum += num
+    except TypeError:
+        return("\'" + str(num) + "\' is not type int or float. Values in num_list should be ints or floats.")
+    except ValueError:
+        return("ValueError returned")
 
     return(sum)
 
