@@ -15,5 +15,5 @@ def test_sum_function():
     tollerance = 0.00000001
     assert case_four - 6.1 < tollerance
     assert case_five + 886.36 < tollerance
-    assert case_six == "'str' is invalid type. num_list expects ints or floats."
+    assert case_six == "'str' is invalid type (expects int or float)."
     assert case_seven == 0
