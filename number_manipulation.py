@@ -11,7 +11,7 @@ def return_sum(num_list):
         for num in num_list:
             sum += num
     except TypeError:
-        return("\'" + str(num) + "\' is not type int or float. Values in num_list should be ints or floats.")
+        return("\'" + str(num) + "\' is invalid type. num_list expects ints or floats.")
     except ValueError:
         return("ValueError returned")
 

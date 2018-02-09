@@ -5,7 +5,7 @@ def test_sum_function():
     case_three = return_sum([-6, -90, -40, 26])
     case_four = return_sum([6.9, 3.2, -4])
     case_five = return_sum([-3.2, -1.8, -9.36, -872])
-    case_six = return_sum([8, "some string"])
+    case_six = return_sum([8, "str"])
     case_seven = return_sum([])
 
     assert case_one == 5
@@ -15,5 +15,5 @@ def test_sum_function():
     tollerance = 0.00000001
     assert case_four - 6.1 < tollerance
     assert case_five + 886.36 < tollerance
-    assert case_six == "'some string' is not type int or float. Values in num_list should be ints or floats."
+    assert case_six == "'str' is invalid type. num_list expects ints or floats."
     assert case_seven == 0
