@@ -9,6 +9,14 @@ def return_sum(num_list):
 
 # @jlongc12 create tuple min/max function here
 def return_limits(num_list):
+
+    """"
+    :param num_list: List of numbers
+    :return limits: Tuple in the form (num_list_minimum_value num_list_maximum_value)
+    :raises : dummy
+
+    """
+
     limits = (min(num_list), max(num_list))
     return limits
 
