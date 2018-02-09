@@ -14,7 +14,7 @@ def return_limits(num_list):
 
 
 # @mackenna95 create max difference function here
-def list_max_adjacent(num_list): # complete
+def list_max_adjacent(num_list):
     import numpy as np
     
     if len(num_list) == 0:
