@@ -16,7 +16,15 @@ def return_limits(num_list):
     :raises : dummy
 
     """
-
+    try:
+        min(num_list)
+    except TypeError:
+        print("Input is not a list.")
+    except ValueError:
+        print("Your list contains non-numeric items.")
+    except ImportError:
+        print("What are you trying to import??"
+              "")
     limits = (min(num_list), max(num_list))
     return limits
 
