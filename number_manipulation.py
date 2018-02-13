@@ -14,16 +14,27 @@ def return_limits(num_list):
 
 
 # @mackenna95 create max difference function here
-def list_max_adjacent(num_list):
+def list_max_adjacent(num_list):   
+    """
+    Returns the maximum difference between two adjacent numbers in an array
+    :param num_list : list of ints and floats
+    :returns max_diff : the maximum difference between two adjacent numbers in num_list
+    :raises : ImportError, TypeError, ValueError
+    """
+
     import numpy as np
 
-    if len(num_list) == 0:
-        max_diff = 0
-    elif len(num_list) == 1:
-        max_diff = 0
-    else:
+    try:
+
         diff = np.diff(num_list)
         abs_diff = np.absolute(diff)
         max_diff = np.max(abs_diff)
+
+    except ImportError:
+        raise ImportError('ImportError returned')
+    except TypeError:
+        raise TypeError('Invalid type (expects int or float).')
+    except ValueError:
+        raise ValueError('ValueError returned')
 
     return max_diff
