@@ -11,21 +11,31 @@ def return_sum(num_list):
 def return_limits(num_list):
 
     """"
+
+    Returns the minimum and maximum value of a list of numbers.
     :param num_list: List of numbers
     :return limits: Tuple in the form (num_list_minimum_value num_list_maximum_value)
     :raises : TypeError, ValueError, ImportError
 
     """
+    import logging
+    logging.basicConfig(filename="number_manipulation_log.txt", format='%(asctime)s %(message)s',
+                        datefmt='%m/%d/%Y %I:%M:%S %p')
+
     try:
         min(num_list)
     except TypeError:
         print("Input is not a list or a list of numeric and non-numeric items.")
+        logging.warning('TypeError triggered.')
     except ValueError:
         print("Your list is empty.")
+        logging.warning('ValueError triggered.')
     except ImportError:
-        print("What are you trying to import??")
+        print("Import packages not found. Please update your version of Python.")
+        logging.warning('ImportError triggered.')
 
     limits = (min(num_list), max(num_list))
+    logging.info('No issues.')
     return limits
 
 
