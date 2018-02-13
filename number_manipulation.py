@@ -13,18 +13,18 @@ def return_limits(num_list):
     """"
     :param num_list: List of numbers
     :return limits: Tuple in the form (num_list_minimum_value num_list_maximum_value)
-    :raises : dummy
+    :raises : TypeError, ValueError, ImportError
 
     """
     try:
         min(num_list)
     except TypeError:
-        print("Input is not a list.")
+        print("Input is not a list or a list of numeric and non-numeric items.")
     except ValueError:
-        print("Your list contains non-numeric items.")
+        print("Your list is empty.")
     except ImportError:
-        print("What are you trying to import??"
-              "")
+        print("What are you trying to import??")
+
     limits = (min(num_list), max(num_list))
     return limits
 
