@@ -26,22 +26,29 @@ def return_limits(num_list):
     if len(num_list) == 1:
         logging.warning('Your list only contains 1 element.')
 
+    if not isinstance(num_list, list):
+        logging.debug('TypeError: not a list')
+        raise TypeError('Input is not a list.')
+
+    if not num_list:
+        logging.debug('ValueError: empty list')
+        raise ValueError("List is empty.")
+
     try:
         min(num_list)
     except TypeError:
-        if not isinstance(a, list):
-            logging.debug('TypeError: Your input is not a list.')
-        elif all(isinstance(x, int) or isinstance(x, float) for x in num_list):
-            logging.debug('TypeError: Your input contains non-numeric elements.')
+        if all(isinstance(x, int) or isinstance(x, float) for x in num_list):
+            logging.debug('TypeError: non-numeric')
+            raise TypeError('List contains non-numeric elements.')
         else:
-            logging.debug('TypeError: Unknown.')
+            logging.debug('TypeError: unknown')
+            raise TypeError('Unknown.')
     except ValueError:
-        if not a:
-            logging.debug('ValueError: Your list is empty')
-        else:
-            logging.debug('ValueError: Unknown.')
+        logging.debug('ValueError: unknown')
+        raise ValueError('Unknown.')
     except ImportError:
-        logging.debug('Import packages not found.')
+        logging.debug('ImportError: packages not found')
+        raise ImportError('Import packages not found.')
 
     limits = (min(num_list), max(num_list))
     logging.info('No issues.')
