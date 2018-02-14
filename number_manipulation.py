@@ -11,7 +11,9 @@ def return_sum(num_list):
     """
 
     import logging
-    logging.basicConfig(filename="number_manipulate_log.txt", format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+    logging.basicConfig(filename="number_manipulate_log.txt",
+                        format='%(asctime)s %(message)s',
+                        datefmt='%m/%d/%Y %I:%M:%S %p')
 
     if not num_list:
         logging.warning('Your list is empty')
