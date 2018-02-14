@@ -26,7 +26,7 @@ def return_sum(num_list):
             sum += num
     except TypeError:
         logging.debug('TypeError: value not int or float')
-        raise TypeError("\'" + str(num) + "\' is invalid type (expects int or float).")
+        raise TypeError("invalid type (expects int or float).")
     except ValueError:
         logging.debug('ValueError: ValueError thrown')
         raise ValueError("ValueError thrown")
