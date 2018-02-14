@@ -13,26 +13,35 @@ def return_limits(num_list):
     """"
 
     Returns the minimum and maximum value of a list of numbers.
-    :param num_list: List of numbers
-    :return limits: Tuple in the form (num_list_minimum_value num_list_maximum_value)
-    :raises : TypeError, ValueError, ImportError
-
+    :param num_list:        List of numbers
+    :return limits:         Tuple in the form (num_list_minimum_value num_list_maximum_value)
+    :raises TypeError:      Triggered when list contains strings or input is not a list
+    :raises ValueError:     Triggered when list is empty
+    :raises ImportError:    Triggered when trying to import unknown packages
     """
     import logging
     logging.basicConfig(filename="number_manipulation_log.txt", format='%(asctime)s %(message)s',
                         datefmt='%m/%d/%Y %I:%M:%S %p')
 
+    if len(num_list) == 1:
+        logging.warning('Your list only contains 1 element.')
+
     try:
         min(num_list)
     except TypeError:
-        print("Input is not a list or a list of numeric and non-numeric items.")
-        logging.warning('TypeError triggered.')
+        if not isinstance(a, list):
+            logging.debug('TypeError: Your input is not a list.')
+        elif all(isinstance(x, int) or isinstance(x, float) for x in num_list):
+            logging.debug('TypeError: Your input contains non-numeric elements.')
+        else:
+            logging.debug('TypeError: Unknown.')
     except ValueError:
-        print("Your list is empty.")
-        logging.warning('ValueError triggered.')
+        if not a:
+            logging.debug('ValueError: Your list is empty')
+        else:
+            logging.debug('ValueError: Unknown.')
     except ImportError:
-        print("Import packages not found. Please update your version of Python.")
-        logging.warning('ImportError triggered.')
+        logging.debug('Import packages not found.')
 
     limits = (min(num_list), max(num_list))
     logging.info('No issues.')
