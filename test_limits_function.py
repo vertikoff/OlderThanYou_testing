@@ -1,5 +1,14 @@
 def test_limits_function():
     from number_manipulation import return_limits
+    import pytest
+
+    with pytest.raises(TypeError):
+        return_limits((1, 2, 3))
+    with pytest.raises(ValueError):
+        return_limits([])
+    with pytest.raises(TypeError):
+        return_limits([1, 's'])
+
     output = return_limits([5])
     assert output == (5, 5)
 
