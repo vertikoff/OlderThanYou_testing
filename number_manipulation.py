@@ -19,7 +19,6 @@ def return_sum(num_list):
         logging.warning('Your list is empty')
         raise ValueError("list is empty")
 
-
     sum = 0
     try:
         for num in num_list:
