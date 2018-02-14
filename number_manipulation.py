@@ -6,15 +6,30 @@ def return_sum(num_list):
     :param num_list: mixed list of ints and floats
     :returns sum: the sum of the ints and floats passed in num_list
     """
+
+    import logging
+    logging.basicConfig(filename="number_manipulate_log.txt", format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+
+    if not num_list:
+        logging.warning('Your list is empty')
+        raise ValueError("list is empty")
+
+
     sum = 0
     try:
         for num in num_list:
             sum += num
     except TypeError:
-        return("\'" + str(num) + "\' is invalid type (expects int or float).")
+        logging.debug('TypeError: value not int or float')
+        raise TypeError("\'" + str(num) + "\' is invalid type (expects int or float).")
     except ValueError:
-        return("ValueError returned")
+        logging.debug('ValueError: ValueError thrown')
+        raise ValueError("ValueError thrown")
+    except ImportError:
+        logging.debug('ImportError thrown')
+        raise ImportError("ImportError: packages not found")
 
+    logging.info("success: sum returned")
     return(sum)
 
 
