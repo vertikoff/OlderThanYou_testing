@@ -5,6 +5,9 @@ def return_sum(num_list):
     takes the values passed in as num_list and returns their sum
     :param num_list: mixed list of ints and floats
     :returns sum: the sum of the ints and floats passed in num_list
+    :raises TypeError: value not int or float
+    :raises ValueError: list is empty
+    :raises ImportError: packages not found
     """
 
     import logging
