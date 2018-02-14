@@ -14,13 +14,14 @@ def return_limits(num_list):
 
     Returns the minimum and maximum value of a list of numbers.
     :param num_list:        List of numbers
-    :return limits:         Tuple in the form (num_list_minimum_value num_list_maximum_value)
-    :raises TypeError:      Triggered when list contains strings or input is not a list
-    :raises ValueError:     Triggered when list is empty
-    :raises ImportError:    Triggered when trying to import unknown packages
+    :return limits:         Tuple in the form (minimum_value maximum_value)
+    :raises TypeError:      List contains strings or input is not a list
+    :raises ValueError:     List is empty
+    :raises ImportError:    Importing unknown packages
     """
     import logging
-    logging.basicConfig(filename="number_manipulation_log.txt", format='%(asctime)s %(message)s',
+    logging.basicConfig(filename="number_manipulation_log.txt",
+                        format='%(asctime)s %(message)s',
                         datefmt='%m/%d/%Y %I:%M:%S %p')
 
     if len(num_list) == 1:
