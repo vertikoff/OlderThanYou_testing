@@ -90,11 +90,11 @@ def return_limits(num_list):
 def list_max_adjacent(num_list):   
     """
     Returns maximum difference between two adjacent numbers
-    :param num_list: list of numbers
-    :returns max_diff: maximum difference between two adjacent numbers
-    :raises TypeError: Input is not a list
-    :raises ValueError: List is empty
-    :raises ImportError: Importing unknown packages
+    :param num_list:        list of numbers
+    :returns max_diff:      maximum difference between two adjacent numbers
+    :raises TypeError:      input is not a list
+    :raises ValueError:     list is empty
+    :raises ImportError:    importing unknown packages
     """
     import logging
     import numpy as np
