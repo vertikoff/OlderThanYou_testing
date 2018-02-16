@@ -6,7 +6,7 @@ def test_max_adjacent():
     assert list_max_adjacent([1, 2, 3]) == 1
     assert list_max_adjacent([1, 2, 2.5, 5]) == 2.5
     assert list_max_adjacent([-1, 1, -2]) == 3
-    pytest.raises(TypeError, list_max_adjacent,["str1","str2"])
-    pytest.raises(ValueError, list_max_adjacent,[1])
-    pytest.raises(ValueError, list_max_adjacent,[])
+    pytest.raises(TypeError, list_max_adjacent, ["str1", "str2"])
+    pytest.raises(ValueError, list_max_adjacent, [1])
+    pytest.raises(ValueError, list_max_adjacent, [])
     return
