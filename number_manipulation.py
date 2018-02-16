@@ -25,7 +25,7 @@ def return_sum(num_list):
             sum_list += num
     except TypeError:
         logging.debug('TypeError: non-numeric')
-        raise TypeError("List contains non-numeric elements (expects int or float).")
+        raise TypeError("List contains non-numeric elements.")
     except ValueError:
         logging.debug('ValueError: empty list')
         raise ValueError("List is empty.")
@@ -70,7 +70,7 @@ def return_limits(num_list):
     except TypeError:
         if all(isinstance(x, int) or isinstance(x, float) for x in num_list):
             logging.debug('TypeError: non-numeric')
-            raise TypeError('List contains non-numeric elements (expects int or float).')
+            raise TypeError('List contains non-numeric elements.')
         else:
             logging.debug('TypeError: unknown')
             raise TypeError('Unknown.')
