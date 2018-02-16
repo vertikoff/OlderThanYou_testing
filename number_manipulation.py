@@ -2,16 +2,16 @@
 def return_sum(num_list):
     """
 
-    takes the values passed in as num_list and returns their sum
-    :param num_list: mixed list of ints and floats
-    :returns sum: the sum of the ints and floats passed in num_list
-    :raises TypeError: value not int or float
-    :raises ValueError: list is empty
-    :raises ImportError: packages not found
+    Takes the values passed in as num_list and returns their sum
+    :param num_list:        mixed list of ints and floats
+    :returns sum:           the sum of the ints and floats passed in num_list
+    :raises TypeError:      value not int or float
+    :raises ValueError:     list is empty
+    :raises ImportError:    packages not found
     """
 
     import logging
-    logging.basicConfig(filename="number_manipulate_log.txt",
+    logging.basicConfig(filename="number_manipulation_log.txt",
                         format='%(asctime)s %(message)s',
                         datefmt='%m/%d/%Y %I:%M:%S %p')
 
@@ -19,22 +19,22 @@ def return_sum(num_list):
         logging.warning('Your list is empty')
         raise ValueError("list is empty")
 
-    sum = 0
+    sum_list = 0
     try:
         for num in num_list:
-            sum += num
+            sum_list += num
     except TypeError:
-        logging.debug('TypeError: value not int or float')
-        raise TypeError("invalid type (expects int or float).")
+        logging.debug('TypeError: non-numeric')
+        raise TypeError("List contains non-numeric elements.")
     except ValueError:
-        logging.debug('ValueError: ValueError thrown')
-        raise ValueError("ValueError thrown")
+        logging.debug('ValueError: empty list')
+        raise ValueError("List is empty.")
     except ImportError:
-        logging.debug('ImportError thrown')
-        raise ImportError("ImportError: packages not found")
+        logging.debug('ImportError: packages not found')
+        raise ImportError("Import packages not found.")
 
-    logging.info("success: sum returned")
-    return(sum)
+    logging.info("Success: sum returned.")
+    return sum_list
 
 
 # @jlongc12 create tuple min/max function here
@@ -43,11 +43,11 @@ def return_limits(num_list):
     """"
 
     Returns the minimum and maximum value of a list of numbers.
-    :param num_list:        List of numbers
-    :return limits:         Tuple in the form (minimum_value maximum_value)
-    :raises TypeError:      List contains strings or input is not a list
-    :raises ValueError:     List is empty
-    :raises ImportError:    Importing unknown packages
+    :param num_list:        mixed list of ints and floats
+    :return limits:         a tuple in the form (minimum_value maximum_value)
+    :raises TypeError:      list contains strings or input is not a list
+    :raises ValueError:     list is empty
+    :raises ImportError:    packages not found
     """
     import logging
     logging.basicConfig(filename="number_manipulation_log.txt",
@@ -82,7 +82,7 @@ def return_limits(num_list):
         raise ImportError('Import packages not found.')
 
     limits = (min(num_list), max(num_list))
-    logging.info('No issues.')
+    logging.info('Success: limits returned.')
     return limits
 
 
