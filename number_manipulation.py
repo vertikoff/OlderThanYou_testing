@@ -87,8 +87,9 @@ def return_limits(num_list):
 
 
 # @mackenna95 create max difference function here
-def list_max_adjacent(num_list):   
+def list_max_adjacent(num_list):
     """
+    
     Returns maximum difference between two adjacent numbers
     :param num_list:        list of numbers
     :returns max_diff:      maximum difference between two adjacent numbers
