@@ -16,6 +16,16 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 
+# crv9 adding readthedocs.io support
+from recommonmark.parser import CommonMarkParser
+
+source_parsers = {
+    '.md': CommonMarkParser,
+}
+
+source_suffix = ['.rst', '.md']
+
+
 
 # -- Project information -----------------------------------------------------
 
@@ -157,11 +167,3 @@ texinfo_documents = [
 
 
 # -- Extension configuration -------------------------------------------------
-# crv9 adding readthedocs.io support
-from recommonmark.parser import CommonMarkParser
-
-source_parsers = {
-    '.md': CommonMarkParser,
-}
-
-source_suffix = ['.rst', '.md']
