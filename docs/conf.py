@@ -1,11 +1,3 @@
-from recommonmark.parser import CommonMarkParser
-
-source_parsers = {
-    '.md': CommonMarkParser,
-}
-
-source_suffix = ['.rst', '.md']
-
 # -*- coding: utf-8 -*-
 #
 # Configuration file for the Sphinx documentation builder.
@@ -22,6 +14,13 @@ source_suffix = ['.rst', '.md']
 #
 import os
 import sys
+from recommonmark.parser import CommonMarkParser
+
+source_parsers = {
+    '.md': CommonMarkParser,
+}
+
+source_suffix = ['.rst', '.md']
 sys.path.insert(0, os.path.abspath('..'))
 
 
