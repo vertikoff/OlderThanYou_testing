@@ -59,7 +59,7 @@ class NumberListManipulator:
     # @jlongc12 create tuple min/max function here
     def set_limits(self):
 
-        """"
+        """
 
         Determines the minimum and maximum value of a list of numbers.
         :param num_list:        mixed list of ints and floats
