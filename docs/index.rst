@@ -9,7 +9,11 @@ Welcome to OlderThanYou_05's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
+modules.rst
+test_sum_function.rst
+test_limits_function.rst
+test_adjacent_diff_function.rst
+number_manipulation.rst
 
 
 Indices and tables
