@@ -1,4 +1,13 @@
 class NumberListManipulator:
+"""
+
+Determines, sum, max, min, and max adjacent diff for given list
+:param num_list: list of ints and floats
+:attr num_list: list passed by user
+:attr sum: sum of num_list
+:attr limits: a tuple in the form (minimum_value maximum_value)
+:attr max_adjacent: max diff between two adjacent members of list
+"""
 
     def __init__(self, num_list=None):
         self.num_list = num_list
@@ -54,7 +63,7 @@ class NumberListManipulator:
 
         Determines the minimum and maximum value of a list of numbers.
         :param num_list:        mixed list of ints and floats
-        :set limits:         a tuple in the form (minimum_value maximum_value)
+        :sets limits:         a tuple in the form (minimum_value maximum_value)
         :raises TypeError:      list contains strings or input is not a list
         :raises ValueError:     list is empty
         :raises ImportError:    packages not found
