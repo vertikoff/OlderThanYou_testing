@@ -79,7 +79,7 @@ class NumberListManipulator:
             min(self.num_list)
         except TypeError:
             if all(isinstance(x, int)
-            or isinstance(x, float) for x in self.num_list):
+                   or isinstance(x, float) for x in self.num_list):
                 logging.debug('TypeError: non-numeric')
                 raise TypeError('List contains non-numeric elements.')
             else:
