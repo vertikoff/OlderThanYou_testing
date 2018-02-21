@@ -13,7 +13,7 @@ class NumberListManipulator:
     def set_sum(self):
         """
 
-        Takes the values in self.num_list and sets their sum as sef.sum
+        Determines the sum of a list of numbers.
         :param self:            instance of class NumberListManipulator
         :sets sum:           the sum of the ints and floats passed in num_list
         :raises TypeError:      value not int or float
@@ -52,9 +52,9 @@ class NumberListManipulator:
 
         """"
 
-        Returns the minimum and maximum value of a list of numbers.
+        Determines the minimum and maximum value of a list of numbers.
         :param num_list:        mixed list of ints and floats
-        :return limits:         a tuple in the form (minimum_value maximum_value)
+        :set limits:         a tuple in the form (minimum_value maximum_value)
         :raises TypeError:      list contains strings or input is not a list
         :raises ValueError:     list is empty
         :raises ImportError:    packages not found
@@ -78,7 +78,7 @@ class NumberListManipulator:
         try:
             min(self.num_list)
         except TypeError:
-            if all(isinstance(x, int) \
+            if all(isinstance(x, int)
             or isinstance(x, float) for x in self.num_list):
                 logging.debug('TypeError: non-numeric')
                 raise TypeError('List contains non-numeric elements.')
@@ -100,9 +100,9 @@ class NumberListManipulator:
     def set_max_adjacent(self):
         """
 
-        Returns maximum difference between two adjacent numbers
+        Determines maximum difference between two adjacent numbers
         :param num_list:        list of numbers
-        :returns max_diff:      maximum difference between two adjacent numbers
+        :sets max_diff:      maximum difference between two adjacent numbers
         :raises TypeError:      input is not a list
         :raises ValueError:     list is empty
         :raises ImportError:    importing unknown packages
