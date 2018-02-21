@@ -13,9 +13,9 @@ class NumberListManipulator:
     def set_sum(self):
         """
 
-        Takes the values passed in as num_list and returns their sum
-        :param num_list:        mixed list of ints and floats
-        :returns sum:           the sum of the ints and floats passed in num_list
+        Takes the values in self.num_list and sets their sum as sef.sum
+        :param self:            instance of class NumberListManipulator
+        :sets sum:           the sum of the ints and floats passed in num_list
         :raises TypeError:      value not int or float
         :raises ValueError:     list is empty
         :raises ImportError:    packages not found
