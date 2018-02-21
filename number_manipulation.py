@@ -47,7 +47,6 @@ class NumberListManipulator:
         logging.info("Success: sum returned.")
         self.sum = sum_list
 
-
     # @jlongc12 create tuple min/max function here
     def set_limits(self):
 
@@ -79,7 +78,8 @@ class NumberListManipulator:
         try:
             min(self.num_list)
         except TypeError:
-            if all(isinstance(x, int) or isinstance(x, float) for x in self.num_list):
+            if all(isinstance(x, int) \
+            or isinstance(x, float) for x in self.num_list):
                 logging.debug('TypeError: non-numeric')
                 raise TypeError('List contains non-numeric elements.')
             else:
@@ -95,7 +95,6 @@ class NumberListManipulator:
         limits = (min(self.num_list), max(self.num_list))
         logging.info('Success: limits returned.')
         self.limits = limits
-
 
     # @mackenna95 create max difference function here
     def set_max_adjacent(self):
